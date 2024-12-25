@@ -6,7 +6,6 @@ import com.pppp.login.domain.models.CreateSession
 import com.pppp.login.domain.LoginRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOf
 import org.screech.ScreechClientApi
 import javax.inject.Inject
 
@@ -18,15 +17,13 @@ class RetrofitLoginRepository @Inject constructor(
     override fun createSession(
         username: String,
         password: String
-    ): Flow<Result<CreateSession>> {
+    ): Flow<Result<CreateSession>> =
         flow {
             val request = CreateSessionRequest(username, password)
             val result = api.createSession(request).map { mapper.map(it) }
-            val mapped = result.fold(
+            emit(result.fold(
                 onSuccess = { Result.Success(it) },
                 onFailure = { Result.Failure(it) }
-            )
-            emit(mapped)
+            ))
         }
-    }
 }
