@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome">Screech</string>
+    <string name="watchadoing">Watcha doing?</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_in">Sign in</string>
+
+
+</resources>

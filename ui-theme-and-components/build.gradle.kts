@@ -1,14 +1,12 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    id("kotlin-kapt")
-    id("com.google.dagger.hilt.android")
     alias(libs.plugins.kotlin.compose)
 }
 
 android {
-    namespace = "com.pppp.login"
-    compileSdk = 35
+    namespace = "com.pppp.ui_theme_and_components"
+    compileSdk = 34
 
     defaultConfig {
         minSdk = 24
@@ -39,20 +37,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":ui-theme-and-components"))
-
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation("androidx.hilt:hilt-navigation-fragment:1.0.0")
-    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
-
-    implementation(project(":domain-common"))
-    implementation(project(":data-network"))
-
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
+    implementation("androidx.compose.ui:ui-text-google-fonts:1.7.6")
 
     // Compose
 
@@ -80,15 +65,10 @@ dependencies {
     // Optional - Integration with ViewModels
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.5")
 
-    
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-}
-
-kapt {
-    correctErrorTypes = true
 }

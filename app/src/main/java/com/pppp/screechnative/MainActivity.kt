@@ -1,29 +1,27 @@
 package com.pppp.screechnative
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.pppp.login.presentation.LoginScreen
-import com.pppp.screechnative.ui.theme.ScreechNativeTheme
+import com.pppp.login.presentation.startup.StartupScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            ScreechNativeTheme {
+            com.pppp.themeandcomponents.theme.ScreechNativeTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { _ ->
-                    LoginScreen()
+                    StartupScreen()
                 }
             }
         }

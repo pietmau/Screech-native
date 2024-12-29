@@ -1,4 +1,4 @@
-package com.pppp.login.presentation
+package com.pppp.login.presentation.login
 
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -8,4 +8,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 fun LoginScreen(
     viewModel: LoginViewModel = hiltViewModel()
 ) {
+    viewModel.login("m-pietrantuono.bsky.social", "MP21gatti!")
+
+
 }

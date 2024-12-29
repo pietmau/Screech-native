@@ -44,8 +44,14 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation("io.ktor:ktor-client-core:3.0.2")
-    implementation("io.ktor:ktor-client-cio:3.0.2")
+//    implementation("io.ktor:ktor-client-core:3.0.2")
+//    implementation("io.ktor:ktor-client-cio:3.0.2")
+
+    implementation("io.ktor:ktor-client-okhttp:3.0.2")
+    implementation("io.ktor:ktor-client-content-negotiation:3.0.2")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.2")
+    implementation("io.ktor:ktor-client-encoding:3.0.2")
+    implementation("io.ktor:ktor-client-auth:3.0.2")
 }
 
 dependencies {
