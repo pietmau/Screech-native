@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -24,7 +23,6 @@ import androidx.compose.ui.unit.dp
 import com.pppp.login.R
 import com.pppp.themeandcomponents.components.ScreechButton
 import com.pppp.themeandcomponents.theme.ScreechNativeTheme
-import com.pppp.themeandcomponents.theme.Surface
 
 @Composable
 fun StartupScreen(
@@ -101,9 +99,8 @@ fun StartupScreen(
 
 @Preview
 @Composable
-fun StartupScreenPreview() {
+private fun StartupScreenPreview() {
     ScreechNativeTheme {
         StartupScreen()
     }
-
 }
