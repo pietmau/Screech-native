@@ -9,7 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.pppp.themeandcomponents.theme.ScreechNativeTheme
+import com.example.compose.AppTheme
 
 @Composable
 fun ScreechButton(
@@ -32,7 +32,7 @@ fun ScreechButton(
 @Preview
 @Composable
 fun ScreechButtonPreview() {
-    ScreechNativeTheme {
+    AppTheme {
         ScreechButton {
             Text(text = "Test")
         }

@@ -20,9 +20,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.example.compose.AppTheme
+import com.example.compose.ExtendedTheme
 import com.pppp.login.R
 import com.pppp.themeandcomponents.components.ScreechButton
-import com.pppp.themeandcomponents.theme.ScreechNativeTheme
 
 @Composable
 fun StartupScreen(
@@ -32,13 +33,7 @@ fun StartupScreen(
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(
-                Color(
-                    red = 44 / 255f,
-                    green = 255 / 255f,
-                    blue = 246 / 255f,
-                )
-            ),
+            .background(ExtendedTheme.colors.splash),
     ) {
         Image(
             modifier = Modifier
@@ -100,7 +95,7 @@ fun StartupScreen(
 @Preview
 @Composable
 private fun StartupScreenPreview() {
-    ScreechNativeTheme {
+    AppTheme {
         StartupScreen()
     }
 }
