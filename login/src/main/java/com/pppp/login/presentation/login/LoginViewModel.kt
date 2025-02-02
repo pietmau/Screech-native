@@ -1,4 +1,4 @@
-package com.pppp.login.presentation.signin
+package com.pppp.login.presentation.login
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

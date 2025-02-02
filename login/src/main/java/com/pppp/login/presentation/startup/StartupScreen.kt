@@ -20,10 +20,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.compose.AppTheme
-import com.example.compose.ExtendedTheme
+import com.pppp.themeandcomponents.theme.AppTheme
 import com.pppp.login.R
 import com.pppp.themeandcomponents.components.ScreechButton
+import com.pppp.themeandcomponents.theme.ExtendedTheme
+import com.pppp.themeandcomponents.theme.padding
+import com.pppp.themeandcomponents.theme.spacing
 
 @Composable
 fun StartupScreen(
@@ -36,8 +38,7 @@ fun StartupScreen(
             .background(ExtendedTheme.colors.splash),
     ) {
         Image(
-            modifier = Modifier
-                .fillMaxSize(),
+            modifier = Modifier.fillMaxSize(),
             painter = painterResource(id = R.drawable.birb),
             contentDescription = null
         )
@@ -47,15 +48,13 @@ fun StartupScreen(
                 .fillMaxSize(),
         ) {
             Column(
-                modifier = Modifier
-                    .align(Alignment.Center),
-                verticalArrangement = Arrangement.spacedBy(16.dp)
+                modifier = Modifier.align(Alignment.Center),
+                verticalArrangement = Arrangement.spacedBy(MaterialTheme.spacing.small),
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
                     text = stringResource(id = R.string.welcome),
-                    style = MaterialTheme.typography.displaySmall.copy(
-                        fontWeight = FontWeight.Bold,
-                    ),
+                    style = MaterialTheme.typography.displayMedium,
                     textAlign = TextAlign.Center
                 )
                 Text(
@@ -68,11 +67,11 @@ fun StartupScreen(
             Column(
                 modifier = Modifier
                     .align(Alignment.BottomCenter)
-                    .padding(16.dp)
+                    .padding(MaterialTheme.padding.medium),
             ) {
                 ScreechButton(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = login
+                    onClick = createAccount
                 ) {
                     Text(text = stringResource(id = R.string.create_account))
                 }
@@ -80,11 +79,9 @@ fun StartupScreen(
                 ScreechButton(
                     modifier = Modifier.fillMaxWidth(),
                     onClick = login,
-                    color = MaterialTheme.colorScheme.surface
                 ) {
                     Text(
                         text = stringResource(id = R.string.sign_in),
-                        color = MaterialTheme.colorScheme.onSurface
                     )
                 }
             }

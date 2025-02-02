@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/data-network" />
             <option value="$PROJECT_DIR$/domain-common" />
             <option value="$PROJECT_DIR$/login" />
+            <option value="$PROJECT_DIR$/ui-theme-and-components" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

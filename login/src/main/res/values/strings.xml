@@ -4,6 +4,8 @@
     <string name="watchadoing">Watcha doing?</string>
     <string name="create_account">Create Account</string>
     <string name="sign_in">Sign in</string>
+    <string name="select_account">Select account</string>
+    <string name="sign_in_as">Sign in as...</string>
 
 
 </resources>
